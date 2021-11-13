@@ -1,5 +1,6 @@
 import moment from "moment";
 import React from "react";
+import '../App.css';
 
 export default function CalenderHeader({ value, setValue }) {
   function currMonthName() {
@@ -18,14 +19,20 @@ export default function CalenderHeader({ value, setValue }) {
 
   return (
     <div className="header">
-      <div className="previous" onClick={() => setValue(prevMonth())}>
+      <div
+        className="button-container-calendar button "
+        onClick={() => setValue(prevMonth())}
+      >
         {String.fromCharCode(171)}
       </div>
       <div className="current">
         {" "}
         {currMonthName()} {currYear()}{" "}
       </div>
-      <div className="next" onClick={() => setValue(nextMonth())}>
+      <div
+        className="button-container-calendar button "
+        onClick={() => setValue(nextMonth())}
+      >
         {String.fromCharCode(187)}
       </div>
     </div>
