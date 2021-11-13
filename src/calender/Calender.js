@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+
 import "../App.css";
+
 
 import buildCalender from "./build";
 import dayStyles, { beforeToday } from "./Styles";
@@ -16,6 +18,7 @@ export default function Calender({value, onChange}) {
   return (
     <div className="calendar">
       <Header value={value} setValue={onChange} />
+
       <div className="body">
         <div className="day-names">
           {["sun", "mon", "tues", "wed", "thurs", "fri", "sat"].map((d) => (
